@@ -1,0 +1,89 @@
+@import 'reset';
+@import 'variables';
+@import 'utilities';
+@import 'typography';
+@import 'elements/buttons';
+
+body {
+  height: 100vh;
+  // background: white;
+  background: $body-gradient;
+  position: relative;
+}
+
+.snackbar {
+  width: 300px;
+  height: 80px;
+  background: white;
+  border-radius: 9px;
+  box-shadow: $shadow-grey-soft;
+  transition: transform 0.3s ease-out;
+
+  position: fixed;
+  z-index: 100;
+  right: 30px;
+  bottom: -100px;
+
+  @media (max-width: 575.9px) {
+    right: 10px;
+  }
+
+  &.isShown {
+    transform: translateY(-130px);
+  }
+
+  &-icon {
+    max-width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  &-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 90px;
+    &-heading {
+      margin-bottom: 8px;
+      color: $color-grey-5;
+    }
+    &-paragraph {
+      color: $color-grey-4;
+    }
+  }
+
+  &-close-btn {
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 10px);
+    transform: translate(-100%, -50%);
+    cursor: pointer;
+  }
+}
+
+.show-snackbar-btn {
+  width: 160px;
+  height: 160px;
+  background: white;
+  border-radius: 100%;
+  box-shadow: $shadow-grey-soft;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    transform: translate(-50%, calc(-50% - 5px));
+  }
+
+  img {
+    max-width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
