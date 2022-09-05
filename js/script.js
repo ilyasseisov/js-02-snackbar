@@ -7,7 +7,7 @@ showSnackbarBtn.addEventListener('click', () => {
 
   setTimeout(() => {
     snackbar.classList.remove('isShown');
-  }, 5000);
+  }, 6000);
 });
 
 closeBtn.addEventListener('click', () => {

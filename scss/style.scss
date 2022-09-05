@@ -1,12 +1,8 @@
 @import 'reset';
 @import 'variables';
-@import 'utilities';
-@import 'typography';
-@import 'elements/buttons';
 
 body {
   height: 100vh;
-  // background: white;
   background: $body-gradient;
   position: relative;
 }
@@ -15,10 +11,9 @@ body {
   width: 300px;
   height: 80px;
   background: white;
-  border-radius: 9px;
+  border-radius: 8px;
   box-shadow: $shadow-grey-soft;
-  transition: transform 0.3s ease-out;
-
+  transition: transform 0.6s ease-out;
   position: fixed;
   z-index: 100;
   right: 30px;
@@ -44,9 +39,12 @@ body {
     top: 50%;
     transform: translateY(-50%);
     left: 90px;
+    font-size: 12px;
     &-heading {
       margin-bottom: 8px;
       color: $color-grey-5;
+      font-size: 16px;
+      font-weight: 900;
     }
     &-paragraph {
       color: $color-grey-4;
