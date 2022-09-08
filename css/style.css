@@ -21,7 +21,8 @@ body {
   position: fixed;
   z-index: 100;
   right: 30px;
-  bottom: -100px;
+  bottom: 0px;
+  transform: translateY(90px);
 }
 @media (max-width: 575.9px) {
   .snackbar {
@@ -29,7 +30,7 @@ body {
   }
 }
 .snackbar.isShown {
-  transform: translateY(-130px);
+  transform: translateY(-30px);
 }
 .snackbar-icon {
   max-width: 60px;
