@@ -1,15 +1,23 @@
+// Variables
 const showSnackbarBtn = document.querySelector('.show-snackbar-btn');
 const snackbar = document.querySelector('.snackbar');
 const closeBtn = document.querySelector('.snackbar-close-btn');
 
-showSnackbarBtn.addEventListener('click', () => {
+// Functions
+
+const showSnackbar = (autohide) => {
   snackbar.classList.add('isShown');
 
-  setTimeout(() => {
-    snackbar.classList.remove('isShown');
-  }, 6000);
-});
+  if (autohide) {
+    setTimeout(hideSnackbar, 5000);
+  }
+};
 
-closeBtn.addEventListener('click', () => {
+const hideSnackbar = () => {
   snackbar.classList.remove('isShown');
-});
+};
+
+// Event listeners
+
+showSnackbarBtn.addEventListener('click', showSnackbar.bind(null, false));
+closeBtn.addEventListener('click', hideSnackbar);
