@@ -26,7 +26,8 @@ body {
 }
 @media (max-width: 575.9px) {
   .snackbar {
-    right: 10px;
+    width: 240px;
+    right: 16px;
   }
 }
 .snackbar.isShown {
@@ -38,6 +39,11 @@ body {
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
+}
+@media (max-width: 575.9px) {
+  .snackbar-icon {
+    display: none;
+  }
 }
 .snackbar-text {
   position: absolute;
@@ -55,12 +61,22 @@ body {
 .snackbar-text-paragraph {
   color: #7c828d;
 }
+@media (max-width: 575.9px) {
+  .snackbar-text {
+    left: 20px;
+  }
+}
 .snackbar-close-btn {
   position: absolute;
   top: 50%;
   left: calc(100% - 10px);
   transform: translate(-100%, -50%);
   cursor: pointer;
+}
+@media (max-width: 575.9px) {
+  .snackbar-close-btn {
+    top: 20px;
+  }
 }
 
 .show-snackbar-btn {

@@ -21,7 +21,8 @@ body {
   transform: translateY(90px);
 
   @media (max-width: 575.9px) {
-    right: 10px;
+    width: 240px;
+    right: 16px;
   }
 
   &.isShown {
@@ -34,6 +35,9 @@ body {
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
+    @media (max-width: 575.9px) {
+      display: none;
+    }
   }
   &-text {
     position: absolute;
@@ -50,6 +54,10 @@ body {
     &-paragraph {
       color: $color-grey-4;
     }
+
+    @media (max-width: 575.9px) {
+      left: 20px;
+    }
   }
 
   &-close-btn {
@@ -58,6 +66,10 @@ body {
     left: calc(100% - 10px);
     transform: translate(-100%, -50%);
     cursor: pointer;
+
+    @media (max-width: 575.9px) {
+      top: 20px;
+    }
   }
 }
 
